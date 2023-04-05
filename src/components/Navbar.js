@@ -3,8 +3,8 @@ import { AiOutlineBars } from "react-icons/ai";
 import { NavLinks } from "@/utils/Links";
 import Link from "next/link";
 import { useState } from "react";
+import Modal from "./Modal";
 const Navbar = () => {
-  const [modal, toggleModal] = useState(false);
   return (
     <div
       id="home"
@@ -20,7 +20,7 @@ const Navbar = () => {
           {NavLinks.map((item, index) => {
             return (
               <Link
-                className="font-mont hover:opacity-80 hover:-translate-y-1 mx-4"
+                className="font-mont hover:opacity-80 hover:-translate-y-1 mx-4 tracking-widest"
                 key={index}
                 href={item.to}
               >
@@ -30,7 +30,7 @@ const Navbar = () => {
           })}
         </div>
         <div className="hidden  xs:block sm:block ss:block xl:hidden lg:hidden md:hidden">
-          <button onClick={() => toggleModal(!modal)}>
+          <button>
             <AiOutlineBars className="h-[30px] w-[30px] hover:rotate-180 hover:scale-95" />
           </button>
         </div>

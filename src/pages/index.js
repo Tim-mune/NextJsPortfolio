@@ -1,6 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Navbar, About, Trial, Education, Skills } from "@/components";
+import {
+  Navbar,
+  About,
+  Trial,
+  Education,
+  Skills,
+  Projects,
+  Experience,
+  Contact,
+} from "@/components";
 export default function Home() {
   return (
     <>
@@ -12,9 +21,13 @@ export default function Home() {
       </Head>
       <main className="">
         <section className="flex flex-col">
+          <Navbar />
           <About />
           <Skills />
+          <Projects />
           <Education />
+          <Experience />
+          <Contact />
           {/* <Trial /> */}
         </section>
       </main>

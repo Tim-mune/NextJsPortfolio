@@ -17,4 +17,7 @@ export const Languages = [
   {
     name: "Kotlin",
   },
+  {
+    name: "Rust",
+  },
 ];
