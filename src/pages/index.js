@@ -9,6 +9,7 @@ import {
   Projects,
   Experience,
   Contact,
+  Footer,
 } from "@/components";
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
           <Education />
           <Experience />
           <Contact />
+          <Footer />
           {/* <Trial /> */}
         </section>
       </main>

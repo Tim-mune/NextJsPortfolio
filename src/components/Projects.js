@@ -1,11 +1,16 @@
 import { projects } from "@/utils/projects";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import Link from "next/link";
 import { useState } from "react";
 const Projects = () => {
   const [number, setNumber] = useState(0);
   const project = projects[number];
+  const [allProjects, hideAllProject] = useState(false);
+  const ShowAll = () => {
+    hideAllProject(!allProjects);
+  };
   const length = projects.length - 1;
   const handleProjectNext = () => {
     if (number > length) {
@@ -26,12 +31,18 @@ const Projects = () => {
   return (
     <div
       id="Projects"
-      className="min-h-screen p-4 flex justify-evenly items-center flex-col  "
+      className="min-h-screen p-4 flex justify-evenly items-center flex-col"
     >
-      <section>
+      <section className="flex flex-col justify-center items-center gap-4">
         <h4 className="text-center font-mont tracking-widest">Projects</h4>
-        <p className="font-Dancing text-center">featured projects</p>
+        <p className="font-Dancing text-center text-2xl tracking-widest">
+          featured projects
+        </p>
+        <button onClick={ShowAll} className=" bg-slate-950 rounded-full">
+          <AiOutlineFundProjectionScreen className=" duration-300 hover:cursor-pointer hover:scale-75 h-[50px] w-[50px] fill-teal-700" />
+        </button>
       </section>
+
       <section className="flex justify-center items-center gap-8">
         <button className=" bg-slate-950 rounded-full">
           <FaChevronLeft
@@ -60,7 +71,7 @@ const Projects = () => {
             display="flex"
             flexDirection="column"
           >
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center rounded-full">
               <img
                 src=""
                 alt={project.name}
@@ -71,7 +82,7 @@ const Projects = () => {
             <p className="font-mont">{project.description}</p>
             <div className="flex"></div>
             <Link
-              className="bg-slate-950 w-1/3 text-center text-white rounded-lg tracking-widest capitalize"
+              className="bg-slate-950 w-1/3 text-center text-white rounded-lg tracking-widest capitalize hover:bg-teal-600 hover:text- hover:border-2 border-teal-950"
               href={project.url}
             >
               test it

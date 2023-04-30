@@ -7,14 +7,14 @@ export const NavLinks = [
     name: "Skills",
     to: "#skills",
   },
-  {
-    name: "Education",
-    to: "#education",
-  },
 
   {
     name: "Projects",
     to: "#Projects",
+  },
+  {
+    name: "Education",
+    to: "#education",
   },
   {
     name: "Experience",

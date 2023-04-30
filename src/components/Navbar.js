@@ -8,10 +8,10 @@ const Navbar = () => {
   return (
     <div
       id="home"
-      className="flex justify-between items-center p-2 sticky top-0 bg-gray-900 bg-opacity-95"
+      className="flex justify-between items-center p-2 sticky top-0 bg-slate-950 bg-opacity-95"
     >
       <section>
-        <Link href="#home" className="font-Dancing underline text-base">
+        <Link href="#home" className="font-Dancing underline text-lg">
           Timmy nesh
         </Link>
       </section>

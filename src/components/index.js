@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import Footer from "./Footer";
 export {
   Navbar,
   About,
@@ -17,4 +18,5 @@ export {
   Skills,
   Experience,
   Projects,
+  Footer,
 };
